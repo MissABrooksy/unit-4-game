@@ -1,0 +1,18 @@
+
+
+
+h1 {
+    color: blueviolet;
+}
+
+.choice {
+    float: left;
+}
+
+#TotalScore {
+    text-align: center;
+}
+
+#FinalScore {
+    text-align: center;
+}
