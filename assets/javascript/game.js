@@ -44,9 +44,19 @@ function addCrystal2ToScore() {
   $("#score-box").html(score);
   } addCrystal4ToScore();
 
+
+// if(numbertoguess === score) {
+//   alert("You Won!");
+
+//   //update wins
+// }
+
+// if (numbertoguess >= score) {
+//   alert("Sorry, You Lose!");
+
+//   //update losses
+// }
  
- 
- $("#number-to-guess").html(numbertoguess);
 
 
  
