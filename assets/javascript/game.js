@@ -7,6 +7,14 @@ let  numbertoguess = Math.floor(Math.random()* 121);
  var crystal3 = Math.ceil(Math.random()*12) ;
  var crystal4 = Math.ceil(Math.random()*12) ;
 
+ function shuffle() {
+  numbertoguess = Math.floor(Math.random()* 121);
+  crystal1 = Math.ceil(Math.random()*12) ;
+  crystal2 = Math.ceil(Math.random()*12) ;
+  crystal3 = Math.ceil(Math.random()*12) ;
+  crystal4 = Math.ceil(Math.random()*12) ;
+ }
+
  var score = 0;
  var wins = 0;
  var losses = 0;
@@ -61,7 +69,7 @@ function addCrystal2ToScore() {
 
 
   function tally () {
-    var wins = 0;
+    var wins=0;
     var losses=0;
     
     if(score === numbertoguess){
@@ -80,16 +88,22 @@ function addCrystal2ToScore() {
 
   }
   }
-
+ 
+ function updateScore () {
+   score++
+ }
+ 
   function resetGame() {
-    numbertoguess = Math.floor(Math.random()* 121);
+    shuffle()
+    // numbertoguess = Math.floor(Math.random()* 121);
     $("#number-to-guess").html(numbertoguess);
       score = 0;
     $("#score-box").html(0);
-       
-    
+    tally()
+// updateScore()
+ 
   }
-
+ 
 ;
 
  
