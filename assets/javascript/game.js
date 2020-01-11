@@ -51,14 +51,15 @@ function addCrystal2ToScore() {
   
   addCrystal4ToScore();
 
+
   function tally () {
     var wins = 0;
     var losses=0;
     
     if(score === numbertoguess){
+        wins++;
+    $("#win").html(wins);
     alert("You Won!");
-    wins++;
-    $("#Win").html(wins);
   }
   if(score> numbertoguess) {
     
@@ -66,19 +67,21 @@ function addCrystal2ToScore() {
     losses++;
     $("#loss").html(losses);
      alert("Game Over! You Lose!");
-     
+     $("#score-box").html(0);
+
   }
   }
 
   // function resetGame() {
-  //   var  numbertoguess = Math.floor(Math.random()* 121)
-  //   $("#score-box").html(0);
+  //   var  numbertoguess = Math.floor(Math.random()* 121);
   //   $("#number-to-guess").html(numbertoguess);
+  //     score = 0;
+  //   $("#score-box").html(0);
        
     
   // }
 
-  // resetGame();
+;
 
  
 
