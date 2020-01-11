@@ -1,5 +1,5 @@
 //setup variables
-var  numbertoguess = Math.floor(Math.random()* 121);
+let  numbertoguess = Math.floor(Math.random()* 121);
 
 
  var crystal1 = Math.ceil(Math.random()*12) ;
@@ -21,7 +21,7 @@ function addCrystal1ToScore() {
   tally(score);
 }
 
-addCrystal1ToScore();
+
 
 $("#bluediamond").on("click", addCrystal2ToScore);
 
@@ -30,7 +30,7 @@ function addCrystal2ToScore() {
   $("#score-box").html(score);
   tally(score);
 }
-  addCrystal2ToScore();
+ 
 
  $("#pinkruby").on("click", addCrystal3ToScore);
 
@@ -39,7 +39,7 @@ function addCrystal2ToScore() {
   $("#score-box").html(score);
   tally(score);
  }
-  addCrystal3ToScore();
+  
  
  $("#greendiamond").on("click", addCrystal4ToScore);
 
@@ -49,7 +49,15 @@ function addCrystal2ToScore() {
   tally(score);
   } 
   
-  addCrystal4ToScore();
+  
+
+  // function resetGame() {
+  //   // Make our current total number 0.
+  //   score = 0;
+  //   // Generate random crystal values.
+  //   // Generate new number to guess.
+  //   $("#score-box").text(numbertoguess);
+  // }
 
 
   function tally () {
@@ -60,6 +68,7 @@ function addCrystal2ToScore() {
         wins++;
     $("#win").html(wins);
     alert("You Won!");
+    resetGame();
   }
   if(score> numbertoguess) {
     
@@ -67,19 +76,19 @@ function addCrystal2ToScore() {
     losses++;
     $("#loss").html(losses);
      alert("Game Over! You Lose!");
-     $("#score-box").html(0);
+     resetGame();
 
   }
   }
 
-  // function resetGame() {
-  //   var  numbertoguess = Math.floor(Math.random()* 121);
-  //   $("#number-to-guess").html(numbertoguess);
-  //     score = 0;
-  //   $("#score-box").html(0);
+  function resetGame() {
+    numbertoguess = Math.floor(Math.random()* 121);
+    $("#number-to-guess").html(numbertoguess);
+      score = 0;
+    $("#score-box").html(0);
        
     
-  // }
+  }
 
 ;
 
